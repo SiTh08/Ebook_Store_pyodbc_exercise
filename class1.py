@@ -16,9 +16,8 @@ class ConnectMsS():
     def print_all_ebooks(self):
         query_rows = self.filter_query('SELECT * FROM ebooks')
         for row in query_rows:
-            print('Title', row[0])
-            print('Author', row[1])
-            print('Date', row[2])
-        print('The end')
+            print('Title:', row[0] + ', ' + 'Author:', row[1] + ', ' + 'Date:', row[2])
+
+
 
 
