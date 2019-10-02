@@ -18,6 +18,11 @@ class ConnectMsS():
         for row in query_rows:
             print('Title:', row[0] + ', ' + 'Author:', row[1] + ', ' + 'Date:', row[2])
 
+    def print_specific_ebooks(self, name):
+        query_rows = self.filter_query(f'SELECT * FROM ebooks where Title = {name}').fetchone()
+        print(query_rows)
+
+    
 
 
 

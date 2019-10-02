@@ -9,3 +9,4 @@ ebook = ConnectMsS(server, database, username, password)
 
 print(ebook.print_all_ebooks())
 
+print(ebook.print_specific_ebooks("'Macbeth'"))
