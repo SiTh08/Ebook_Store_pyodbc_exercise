@@ -1,4 +1,5 @@
 import pyodbc
+from connection import *
 
 class ConnectMsS():
 
@@ -22,7 +23,9 @@ class ConnectMsS():
         query_rows = self.filter_query(f'SELECT * FROM ebooks where Title = {name}').fetchone()
         print(query_rows)
 
-    
+    def input_book(self, title, author, date):
+        self.filter_query(f'INSERT INTO ebooks (Title, Author, [Date]) VALUES ({title}, {author}, {date})')
+        conn_ebooks.commit()
 
 
 
